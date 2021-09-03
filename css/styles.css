@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+html {
+	scroll-behavior: smooth;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--font1: 'Merriweather Sans', sans-serif;
+	--color1: #fff;
+	--color2: #000;
+	--color3: #f4623a;
+	--color4: #D9D9D9;
+	--color5: #CF502D;
+	--color6: #737575;
+}
+
+/* Navbar Styles */
+.navbar {
+	padding: 0;
+	padding: 16px 0;
+	background: transparent;
+	width: 100%;
+	transition: background-color .5s ease;
+}
+.navbar-brand {
+	color: var(--color1);
+}
+.navbar-expand-md .navbar-nav .nav-item:last-child .nav-link {
+	padding-right: 0;
+}
+.navbar-expand-md .navbar-nav .nav-item .nav-link {
+	padding: 0;
+	padding: 0 16px;
+	text-transform: capitalize;
+	font-family: var(--font1);
+	color: var(--color4);
+	transition: .5s ease;
+}
+.navbar-expand-md .navbar-nav .nav-item .nav-link:hover {
+	color: var(--color1);
+}
+.navbar-toggler-icon {
+	background-image: url("../images/mobile-menu-icon.png");
+}
+/* Navbar color change on scroll styles */
+nav.navbar.scrolled {
+	background: var(--color1);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+/* End Of Navbar color change on scroll styles */
+
+/* Navbar Link Color Change On Scroll */
+.change.linkcolor {
+	color: var(--color2)!important;
+}
+.change.linkcolor:hover {
+	color: var(--color3)!important;
+}
+.change.linkcolor.active {
+	color: var(--color3)!important;
+}
+/* End Of Navbar Link Color Change On Scroll */
+
+
+@media screen and (max-width: 767px) {
+
+	.navbar {
+		background: var(--color1)!important;
+	}
+	.navbar-brand {
+		color: var(--color2)!important;
+	}
+	.navbar-expand-md .navbar-nav .nav-item .nav-link {
+		padding: 16px!important;
+		color: var(--color2)!important;
+	}
+
+}
+/* End Of Navbar Styles */
+
+/* Banner Styles */
+.banner {
+	width: 100%;
+	height: 640px;
+	background: #5C5B5B url(../images/bg-masthead.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+.banner::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #453F3F;
+	opacity: 0.5;
+	z-index: 1;
+}
+.banner .banner-info {
+	width: 50%;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 9;
+}
+.banner .banner-info h1 {
+	font-size: 50px;
+	font-weight: 500;
+	font-family: var(--font1);
+	color: var(--color1);
+	text-transform: capitalize;
+}
+hr.divider {
+	height: 3px;
+	max-width: 52px;
+	margin: 24px auto;
+	background-color: var(--color3);
+	opacity: 1;
+}
+.banner .banner-info p {
+	color: var(--color1);
+	font-size: 18px;
+	font-family: var(--font1);
+	margin-bottom: 40px;
+}
+.banner .banner-info a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: var(--font1);
+	font-size: 14px;
+	color: var(--color1);
+	background: var(--color3);
+	padding: 20px 35px;
+	border-radius: 50px;
+	transition: .5s ease;
+}
+.banner .banner-info a:hover {
+	background: var(--color5);
+}
+
+@media screen and (max-width: 767px) {
+
+	.banner-info {
+		width: 100%!important;
+	}
+
+}
+
+/* End Of Banner Styles*/
+
+/* Get Started Styles */
+.get-started {
+	background: var(--color3);
+	padding: 128px 0;
+}
+.get-started .get-started-info {
+	width: 50%;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+.get-started .get-started-info h1,
+.get-started .get-started-info p {
+	color: var(--color1);
+}
+.get-started .get-started-info h1,
+.services-area h1 {
+	font-size: 32px;
+	text-transform: capitalize;
+	font-family: var(--font1);
+}
+hr.divider-light {
+	height: 3px;
+	max-width: 52px;
+	margin: 24px auto;
+	background-color: var(--color1);
+	opacity: 1;
+}
+.get-started .get-started-info p {
+	color: var(--color1);
+	font-size: 18px;
+	font-family: var(--font1);
+	margin-bottom: 40px;
+}
+.get-started .get-started-info a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: var(--font1);
+	font-size: 14px;
+	color: var(--color2);
+	background: var(--color1);
+	padding: 20px 35px;
+	border-radius: 50px;
+	transition: .5s ease;
+}
+.get-started .get-started-info a:hover {
+	background: var(--color4);
+}
+
+@media screen and (max-width: 767px) {
+
+	.get-started-info {
+		width: 100%!important;
+	}
+
+}
+/* End of Get Started Styles */
+
+/* Services Area Styles */
+.services-area {
+	padding: 128px 0;
+}
+.services-area h1 {
+	text-align: center;
+}
+.services-area .services-info {
+	text-align: center;
+}
+.services-area .services-info i {
+	font-size: 40px;
+	color: var(--color3);
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+.services-area .services-info h2,
+.services-area .services-info p {
+	font-family: var(--font1);
+}
+.services-area .services-info h2 {
+	font-size: 24px;
+	text-transform: capitalize;
+}
+.services-area .services-info p {
+	color: var(--color6);
+}
+
+
+/* End Of Services Area Styles */
+
+/* Gallery Area Styles */
+img.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+.gallery .no-pad {
+	padding: 0!important;
+	margin: 0!important;
+}
+.img-box {
+	position: relative;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--color3);
+	opacity: 0;
+	pointer-events: none;
+	transition: .5s ease;
+}
+.img-box:hover .overlay {
+	opacity: 0.8;
+	cursor: pointer;
+}
+a.icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	color: var(--color1);
+}
+.fa-search:hover {
+	color: var(--color1);
+}
+/* End Of Gallery Area Styles */
+
+/* Form Styles */
+.form {
+	padding: 128px 0;
+}
+.form-title {
+	text-align: center;
+}
+.form-title h2 {
+	font-size: 32px;
+	font-family: var(--font1);
+	text-transform: capitalize;
+}
+.form-title p {
+	color: var(--color6);
+	font-size: 18px;
+	font-family: var(--font1);
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+	width: 100%;
+	height: 50px;
+	padding: 0 30px;
+	width: calc(100% - 60px);
+	border-radius: 5px;
+	border: 1px solid var(--color6);
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+textarea:focus {
+	outline: none!important;
+	border: 1px solid var(--color3);
+	box-shadow: 0 0 10px var(--color3);
+}
+textarea {
+	width: 89%;
+	padding: 5px;
+	text-indent: 25px;
+}
+form input[type="submit"] {
+	height: 50px;
+	padding: 6px 16px;
+	width: 89%;
+	border: none;
+	border-radius: 50px;
+	background: var(--color3);
+	color: var(--color1);
+}
+/* End Of Form Styles */
+
+/* Footer Styles */
+footer {
+	padding: 48px 0;
+	background: var(--color4);
+}
+footer p {
+	margin: 0;
+	text-align: center;
+	font-family: var(--font1);
+	color: var(--color6);
+	font-size: 12px;
+}
+/* End Of Footer Styles */
